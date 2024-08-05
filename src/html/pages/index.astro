@@ -50,13 +50,13 @@ const page = "index";
             <!--begin::Row-->
             <div class="row">
               <div class="col-sm-6">
-                <h3 class="mb-0">Dashboard</h3>
+                <h3 class="mb-0"><img src={path + "/assets/img/NCHCLogo.png"} alt="NCHC Logo" class="brand-image img-circle elevation-3" width="30px" height="30px" style="opacity: .8">TWAREN監控儀錶板</h3>
               </div>
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">
-                    Dashboard
+                    TWAREN監控儀錶板
                   </li>
                 </ol>
               </div>
@@ -71,18 +71,27 @@ const page = "index";
           <!--begin::Container-->
           <div class="container-fluid">
             <div class="row">
-              <MyComponent client:load/>
+              <div class="col-12">
+              <div class="callout callout-warning" style="padding-bottom: 0rem;">
+                          <h5>通知</h5>
+                          <p>
+                   <marquee width="100%" direction="up" height="30px" scrolldelay =200>
+                            1. 設備維修通知-臺北主節點光設備進行更換，預估於2024/06/19 01:00進行維護，預估影響至2024/06/19 03:00，影響範圍台北區網<br/>
+                            2. 系統更版通知-整合式網管系統進行更版，預估於2024/06/19 01:00:00進行維護，預估影響至2024/06/19 03:00，影響範圍:客服人員
+                           </marquee>
+                  </p>
+                  </div>
+              </div>
             </div>
             <!--begin::Row-->
             <div class="row">
               <!--begin::Col-->
-              <div class="col-lg-3 col-6">
+              <div class="col-lg-3 col-6 col-sm-6">
                 <!--begin::Small Box Widget 1-->
-                <div class="small-box text-bg-primary">
+                <div class="small-box" style="background-color: rgba(241, 69, 69, 0.6)">
                   <div class="inner">
-                    <h3>150</h3>
-
-                    <p>New Orders</p>
+                    <h3>15 <span style="font-size: 1.5rem">件</span></h3>
+                    <p style="font-size: 1.5rem">嚴重事件</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -99,19 +108,19 @@ const page = "index";
                     href="#"
                     class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    查看更多 <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 1-->
               </div>
               <!--end::Col-->
-              <div class="col-lg-3 col-6">
+              <div class="col-lg-3 col-6 col-sm-6">
                 <!--begin::Small Box Widget 2-->
-                <div class="small-box text-bg-success">
+                <div class="small-box" style="background-color: rgba(241, 69, 69, 0.6)">
                   <div class="inner">
-                    <h3>53<sup class="fs-5">%</sup></h3>
+                    <h3>2 <span style="font-size:1rem">失聯設備</span><sub style="font-size: 1.5rem">/40</sub></h3>
 
-                    <p>Bounce Rate</p>
+                    <p style="font-size: 1.5rem">國內骨幹</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -128,19 +137,19 @@ const page = "index";
                     href="#"
                     class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    查看更多 <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 2-->
               </div>
               <!--end::Col-->
-              <div class="col-lg-3 col-6">
+              <div class="col-lg-3 col-6 col-sm-6">
                 <!--begin::Small Box Widget 3-->
-                <div class="small-box text-bg-warning">
+                <div class="small-box" style="background-color: rgba(0, 165, 114, 0.6)">
                   <div class="inner">
-                    <h3>44</h3>
+                    <h3>0 <span style="font-size: 1rem">失聯設備</span><sub style="font-size: 1.5rem">/10</sub></h3>
 
-                    <p>User Registrations</p>
+                    <p style="font-size: 1.5rem">國際骨幹</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -157,19 +166,19 @@ const page = "index";
                     href="#"
                     class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    查看更多 <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 3-->
               </div>
               <!--end::Col-->
-              <div class="col-lg-3 col-6">
+              <div class="col-lg-3 col-6 col-sm-6">
                 <!--begin::Small Box Widget 4-->
-                <div class="small-box text-bg-danger">
+                <div class="small-box" style="background-color: rgba(247, 207, 7, 0.8)">
                   <div class="inner">
-                    <h3>65</h3>
+                    <h3>1 <span style="font-size: 1rem">失聯設備</span><sub style="font-size: 1.5rem">/15</sub></h3>
 
-                    <p>Unique Visitors</p>
+                    <p style="font-size: 1.5rem">軟體資源</p>
                   </div>
                   <svg
                     class="small-box-icon"
@@ -193,7 +202,7 @@ const page = "index";
                     href="#"
                     class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover"
                   >
-                    More info <i class="bi bi-link-45deg"></i>
+                    查看更多 <i class="bi bi-link-45deg"></i>
                   </a>
                 </div>
                 <!--end::Small Box Widget 4-->
@@ -204,6 +213,79 @@ const page = "index";
             <!--begin::Row-->
             <div class="row">
               <!-- Start col -->
+              <div class="col-lg-6 connectedSortable">
+                <div class="card card-info" style=" margin-bottom: 10px;">
+                  <div class="card-header bg-white">
+                    <h3 class="card-title">TWAREN 400G 骨幹網路即時監控狀態圖(檢查時間: 2024/06/18 19:00:05) </h3>
+                    <div class="card-tools">
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        data-lte-toggle="card-collapse"
+                      >
+                        <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                        <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        data-lte-toggle="card-remove"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body p-0">
+                    <div class="d-md-flex">
+                     <div class="p-1 flex-fill">                                             
+                      <img id="mapclick" src={ path + "/assets/img/eyesee_mtsec.png"} style="width:100%; height:100%" onclick="mapclick()"/>
+                     </div>
+                    </div><!-- /.d-md-flex -->
+                  </div>
+                  <div class="card-footer">
+                    <div class="row">
+                      <div class="col-sm-3 col-6">
+                        <div class="description-block border-right">
+                          <span class="description-percentage text-success"><i class="bi bi-arrow-up"></i> 1%</span>
+                          <h5 class="description-header text-danger" style="font-size:18px">5<small class="text-dark mr-1">件</small></h5>
+                          <span class="description-text"><i class="bi- bi-exclamation-circle-fill" style="color:#dc3545"></i>Critical Event</span>
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-3 col-6">
+                        <div class="description-block border-right">
+                          <span class="description-percentage text-danger"><i class="bi bi-arrow-down"></i> 2%</span>
+                          <h5 class="description-header text-warning" style="font-size:18px">50<small class="text-dark mr-1">件</small></h5>
+                          <span class="description-text"><i class="bi bi-exclamation-triangle-fill" style="color:#ffc107"></i>Minor Event</span>
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-3 col-6">
+                        <div class="description-block border-right">
+                          <span class="description-percentage text-success"><i class="bi bi-arrow-up"></i> 0%</span>
+                          <h5 class="description-header text-success" style="font-size:18px">0<small class="text-dark mr-1">件</small></h5>
+                          <span class="description-text"><i class="bi bi-check2-square" style="color:#28a745"><span class="btn-tool"></span></i>Normal Event</span>
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-sm-3 col-6">
+                        <div class="description-block">
+                          <span class="description-percentage text-danger"><i class="bi bi-arrow-down"></i> 1%</span>
+                          <h5 class="description-header" style="font-size:18px">55<small class="text-dark mr-1">件</small></h5>
+                          <span class="description-text">Total Event</span>
+                        </div>
+                        <!-- /.description-block -->
+                      </div>
+                    </div>
+                    <!-- /.row -->
+                  </div>
+                  <!-- /.card-footer -->
+                </div>
+              </div>
               <div class="col-lg-7 connectedSortable">
                 <div class="card mb-4">
                   <div class="card-header">
@@ -561,6 +643,9 @@ const page = "index";
                       </div>
                     </div>
                     <!--end::Row-->
+                    <div class="row">
+                      <MyComponent client:load/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -573,7 +658,7 @@ const page = "index";
         <!--end::App Content-->
       </main>
       <!--end::App Main-->
-      <Footer />
+      <Footer path={path}/>
     </div>
     <!--end::App Wrapper-->
     <!--begin::Script-->
@@ -801,3 +886,4 @@ const page = "index";
     <!--end::Script-->
   </body><!--end::Body-->
 </html>
+path
