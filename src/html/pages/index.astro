@@ -6,7 +6,7 @@ import Sidenav from "@components/commons/_sidenav.astro";
 import Scripts from "@components/_scripts.astro";
 import MyComponent from '../components/MyComponent.vue';
 
-const title = "AdminLTE v4 | Dashboard";
+const title = "網路管理系統 | 儀錶板";
 const path = "../../dist";
 const mainPage = "commons";
 const page = "index";
@@ -249,7 +249,7 @@ const page = "index";
                         <div class="description-block border-right">
                           <span class="description-percentage text-success"><i class="bi bi-arrow-up"></i> 1%</span>
                           <h5 class="description-header text-danger" style="font-size:18px">5<small class="text-dark mr-1">件</small></h5>
-                          <span class="description-text"><i class="bi- bi-exclamation-circle-fill" style="color:#dc3545"></i>Critical Event</span>
+                          <span class="description-text"><i class="bi bi-exclamation-circle-fill" style="color:#dc3545"></i>Critical Event</span>
                         </div>
                         <!-- /.description-block -->
                       </div>
@@ -267,7 +267,7 @@ const page = "index";
                         <div class="description-block border-right">
                           <span class="description-percentage text-success"><i class="bi bi-arrow-up"></i> 0%</span>
                           <h5 class="description-header text-success" style="font-size:18px">0<small class="text-dark mr-1">件</small></h5>
-                          <span class="description-text"><i class="bi bi-check2-square" style="color:#28a745"><span class="btn-tool"></span></i>Normal Event</span>
+                          <span class="description-text"><i class="bi bi-check" style="color:#28a745"><span class="btn-tool"></span></i>Normal Event</span>
                         </div>
                         <!-- /.description-block -->
                       </div>
@@ -280,376 +280,187 @@ const page = "index";
                         </div>
                         <!-- /.description-block -->
                       </div>
+                      
                     </div>
                     <!-- /.row -->
                   </div>
                   <!-- /.card-footer -->
                 </div>
               </div>
-              <div class="col-lg-7 connectedSortable">
-                <div class="card mb-4">
-                  <div class="card-header">
-                    <h3 class="card-title">Sales Value</h3>
-                  </div>
-
-                  <div class="card-body">
-                    <div id="revenue-chart"></div>
-                  </div>
-                </div>
-                <!-- /.card -->
-
-                <!-- DIRECT CHAT -->
-                <div class="card direct-chat direct-chat-primary mb-4">
-                  <div class="card-header">
-                    <h3 class="card-title">Direct Chat</h3>
-
-                    <div class="card-tools">
-                      <span
-                        title="3 New Messages"
-                        class="badge text-bg-primary"
-                      >
-                        3
-                      </span>
-                      <button
-                        type="button"
-                        class="btn btn-tool"
-                        data-lte-toggle="card-collapse"
-                      >
-                        <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
-                        <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-tool"
-                        title="Contacts"
-                        data-lte-toggle="chat-pane"
-                      >
-                        <i class="bi bi-chat-text-fill"></i>
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-tool"
-                        data-lte-toggle="card-remove"
-                      >
-                        <i class="bi bi-x-lg"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                    <!-- Conversations are loaded here -->
-                    <div class="direct-chat-messages">
-                      <!-- Message. Default to the start -->
-                      <div class="direct-chat-msg">
-                        <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-start">
-                            Alexander Pierce
-                          </span>
-                          <span class="direct-chat-timestamp float-end">
-                            23 Jan 2:00 pm
-                          </span>
-                        </div>
-                        <!-- /.direct-chat-infos -->
-                        <img
-                          class="direct-chat-img"
-                          src={path + "/assets/img/user1-128x128.jpg"}
-                          alt="message user image"
-                        />
-                        <!-- /.direct-chat-img -->
-                        <div class="direct-chat-text">
-                          Is this template really for free? That's unbelievable!
-                        </div>
-                        <!-- /.direct-chat-text -->
-                      </div>
-                      <!-- /.direct-chat-msg -->
-
-                      <!-- Message to the end -->
-                      <div class="direct-chat-msg end">
-                        <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-end">
-                            Sarah Bullock
-                          </span>
-                          <span class="direct-chat-timestamp float-start">
-                            23 Jan 2:05 pm
-                          </span>
-                        </div>
-                        <!-- /.direct-chat-infos -->
-                        <img
-                          class="direct-chat-img"
-                          src={path + "/assets/img/user3-128x128.jpg"}
-                          alt="message user image"
-                        />
-                        <!-- /.direct-chat-img -->
-                        <div class="direct-chat-text">
-                          You better believe it!
-                        </div>
-                        <!-- /.direct-chat-text -->
-                      </div>
-                      <!-- /.direct-chat-msg -->
-
-                      <!-- Message. Default to the start -->
-                      <div class="direct-chat-msg">
-                        <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-start">
-                            Alexander Pierce
-                          </span>
-                          <span class="direct-chat-timestamp float-end">
-                            23 Jan 5:37 pm
-                          </span>
-                        </div>
-                        <!-- /.direct-chat-infos -->
-                        <img
-                          class="direct-chat-img"
-                          src={path + "/assets/img/user1-128x128.jpg"}
-                          alt="message user image"
-                        />
-                        <!-- /.direct-chat-img -->
-                        <div class="direct-chat-text">
-                          Working with AdminLTE on a great new app! Wanna join?
-                        </div>
-                        <!-- /.direct-chat-text -->
-                      </div>
-                      <!-- /.direct-chat-msg -->
-
-                      <!-- Message to the end -->
-                      <div class="direct-chat-msg end">
-                        <div class="direct-chat-infos clearfix">
-                          <span class="direct-chat-name float-end">
-                            Sarah Bullock
-                          </span>
-                          <span class="direct-chat-timestamp float-start">
-                            23 Jan 6:10 pm
-                          </span>
-                        </div>
-                        <!-- /.direct-chat-infos -->
-                        <img
-                          class="direct-chat-img"
-                          src={path + "/assets/img/user3-128x128.jpg"}
-                          alt="message user image"
-                        />
-                        <!-- /.direct-chat-img -->
-                        <div class="direct-chat-text">I would love to.</div>
-                        <!-- /.direct-chat-text -->
-                      </div>
-                      <!-- /.direct-chat-msg -->
-                    </div>
-                    <!-- /.direct-chat-messages-->
-
-                    <!-- Contacts are loaded here -->
-                    <div class="direct-chat-contacts">
-                      <ul class="contacts-list">
-                        <li>
-                          <a href="#">
-                            <img
-                              class="contacts-list-img"
-                              src={path + "/assets/img/user1-128x128.jpg"}
-                              alt="User Avatar"
-                            />
-
-                            <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                Count Dracula
-                                <small class="contacts-list-date float-end">
-                                  2/28/2023
-                                </small>
-                              </span>
-                              <span class="contacts-list-msg">
-                                How have you been? I was...
-                              </span>
-                            </div>
-                            <!-- /.contacts-list-info -->
-                          </a>
-                        </li>
-                        <!-- End Contact Item -->
-                        <li>
-                          <a href="#">
-                            <img
-                              class="contacts-list-img"
-                              src={path + "/assets/img/user7-128x128.jpg"}
-                              alt="User Avatar"
-                            />
-
-                            <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                Sarah Doe
-                                <small class="contacts-list-date float-end">
-                                  2/23/2023
-                                </small>
-                              </span>
-                              <span class="contacts-list-msg">
-                                I will be waiting for...
-                              </span>
-                            </div>
-                            <!-- /.contacts-list-info -->
-                          </a>
-                        </li>
-                        <!-- End Contact Item -->
-                        <li>
-                          <a href="#">
-                            <img
-                              class="contacts-list-img"
-                              src={path + "/assets/img/user3-128x128.jpg"}
-                              alt="User Avatar"
-                            />
-
-                            <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                Nadia Jolie
-                                <small class="contacts-list-date float-end">
-                                  2/20/2023
-                                </small>
-                              </span>
-                              <span class="contacts-list-msg">
-                                I'll call you back at...
-                              </span>
-                            </div>
-                            <!-- /.contacts-list-info -->
-                          </a>
-                        </li>
-                        <!-- End Contact Item -->
-                        <li>
-                          <a href="#">
-                            <img
-                              class="contacts-list-img"
-                              src={path + "/assets/img/user5-128x128.jpg"}
-                              alt="User Avatar"
-                            />
-
-                            <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                Nora S. Vans
-                                <small class="contacts-list-date float-end">
-                                  2/10/2023
-                                </small>
-                              </span>
-                              <span class="contacts-list-msg">
-                                Where is your new...
-                              </span>
-                            </div>
-                            <!-- /.contacts-list-info -->
-                          </a>
-                        </li>
-                        <!-- End Contact Item -->
-                        <li>
-                          <a href="#">
-                            <img
-                              class="contacts-list-img"
-                              src={path + "/assets/img/user6-128x128.jpg"}
-                              alt="User Avatar"
-                            />
-
-                            <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                John K.
-                                <small class="contacts-list-date float-end">
-                                  1/27/2023
-                                </small>
-                              </span>
-                              <span class="contacts-list-msg">
-                                Can I take a look at...
-                              </span>
-                            </div>
-                            <!-- /.contacts-list-info -->
-                          </a>
-                        </li>
-                        <!-- End Contact Item -->
-                        <li>
-                          <a href="#">
-                            <img
-                              class="contacts-list-img"
-                              src={path + "/assets/img/user8-128x128.jpg"}
-                              alt="User Avatar"
-                            />
-
-                            <div class="contacts-list-info">
-                              <span class="contacts-list-name">
-                                Kenneth M.
-                                <small class="contacts-list-date float-end">
-                                  1/4/2023
-                                </small>
-                              </span>
-                              <span class="contacts-list-msg">
-                                Never mind I found...
-                              </span>
-                            </div>
-                            <!-- /.contacts-list-info -->
-                          </a>
-                        </li>
-                        <!-- End Contact Item -->
-                      </ul>
-                      <!-- /.contacts-list -->
-                    </div>
-                    <!-- /.direct-chat-pane -->
-                  </div>
-                  <!-- /.card-body -->
-                  <div class="card-footer">
-                    <form action="#" method="post">
-                      <div class="input-group">
-                        <input
-                          type="text"
-                          name="message"
-                          placeholder="Type Message ..."
-                          class="form-control"
-                        />
-                        <span class="input-group-append">
-                          <button type="button" class="btn btn-primary">
-                            Send
-                          </button>
-                        </span>
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.card-footer-->
-                </div>
-                <!-- /.direct-chat -->
-              </div>
-              <!-- /.Start col -->
-
-              <!-- Start col -->
-              <div class="col-lg-5 connectedSortable">
-                <div
-                  class="card text-white bg-primary bg-gradient border-primary mb-4"
-                >
-                  <div class="card-header border-0">
-                    <h3 class="card-title">Sales Value</h3>
-                    <div class="card-tools">
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-sm"
-                        data-lte-toggle="card-collapse"
-                      >
-                        <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
-                        <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div id="world-map" style="height: 220px"></div>
-                  </div>
-                  <div class="card-footer border-0">
-                    <!--begin::Row-->
-                    <div class="row">
-                      <div class="col-4 text-center">
-                        <div id="sparkline-1" class="text-dark"></div>
-                        <div class="text-white">Visitors</div>
-                      </div>
-                      <div class="col-4 text-center">
-                        <div id="sparkline-2" class="text-dark"></div>
-                        <div class="text-white">Online</div>
-                      </div>
-                      <div class="col-4 text-center">
-                        <div id="sparkline-3" class="text-dark"></div>
-                        <div class="text-white">Sales</div>
+               <!-- Left col -->
+            <div class="col-lg-6 col-md-6 card-deck connectedSortable">
+              <!-- /.card 1 -->     
+              <div class="card card-info" style=" margin-bottom: 10px;">
+                <div class="card-header bg-white">
+                      <h3 class="card-title">截至今日尚未結案事件單</h3>
+                      <div class="card-tools">
+                       
+                        <button
+                          type="button"
+                          class="btn btn-tool"
+                          data-lte-toggle="card-collapse"
+                        >
+                          <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                          <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-tool"
+                          data-lte-toggle="card-remove"
+                        >
+                          <i class="bi bi-x-lg"></i>
+                        </button>
                       </div>
                     </div>
-                    <!--end::Row-->
-                    <div class="row">
-                      <MyComponent client:load/>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                <table class="table table-bordered table-striped">
+                <thead>
+                        <tr>
+                          <th style="text-align: center"><i class="icon bi bi-exclamation-circle-fill" style="font-size:20px;color:#dc3545"></i><span class="btn-tool">15</span></th>
+                          <th style="text-align: center"><i class="icon bi bi-exclamation-triangle-fill" style="font-size:20px;color:#ffc107"><span class="btn-tool">56</span></th>
+                          <th style="text-align: center"><i class="icon bi bi-check" style="font-size:20px;color:#28a745"><span class="btn-tool">30</span></th>
+                        </tr>
+                        </thead>
+                </table>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                      <table class="table table-hover text-nowrap">
+                        <thead>
+                         
+                        </thead>
+                        <tbody>
+                          <tr>
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-exclamation-circle-fill" style="font-size:20px;color:#dc3545"></i></td>
+                            <!--td style="background-color: rgba(241, 69, 69, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-circle" style="color:#dc3545"></i><br/></td-->
+                  <!--td style="background-color:#dc3545; text-align: center; vertical-align: middle;"><i class="icon fas fa-exclamation-circle" style="color:#fff"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">1130101-004</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">TWAREN-TN-ASR001-01</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">[to TWAREN-AC-AS002-01] in 0 Mbps, out 0Mbps</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 10:05:01<br/> <div style="font-size:14px;float:right">17hr 53min</div></td>
+                          </tr>
+                          <tr>
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-exclamation-circle-fill" style="font-size:20px;color:#dc3545"></i></td>
+                            <!--td style="background-color: rgba(241, 69, 69, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-circle" style="color:#dc3545"></i><br/></td-->
+                  <!--td style="background-color:#dc3545; text-align: center; vertical-align: middle;"><i class="icon fas fa-exclamation-circle" style="color:#fff"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">1130101-003</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">TWAREN-TN-ASR001-02</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">[to TWAREN-AC-AS002-02] in 0 Mbps, out 0Mbps, in_high: 9000, in_low: 1e-05, in_avg:0</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 10:00:01<br/> <div style="font-size:14px;float:right">17hr 48min</div></td>
+                          </tr>
+                          <tr>
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-exclamation-triangle-fill" style="font-size:20px;color:#ffc107"></i></td>
+                            <!--td style="background-color: rgba(247, 207, 7, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-triangle" style="color:#ffc107"></i><br/></td-->
+                  <!--td style="background-color:#ffc107; text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-triangle" style="color:#fff"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">1130101-002</span><br/>
+                  類別 <span style="color:dodgerblue">InterfacesPort </span>設備/單位 <span style="color:dodgerblue">TWAREN-TN-ASR001-02</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">Backbone Circuit Interface(Bundle-Ether2) Abnormal (to TWAREN-NIU-ASR9010-01)</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 09:55:01<br/> <div style="font-size:14px;float:right">17hr 43min</div></td>
+                          </tr>
+                          <tr>
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-exclamation-circle-fill" style="font-size:20px;color:#dc3545"></i></td>
+                            <!--td style="background-color: rgba(241, 69, 69, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-circle" style="color:#dc3545"></i><br/></td-->
+                  <!--td style="background-color:#dc3545; text-align: center; vertical-align: middle;"><i class="icon fas fa-exclamation-circle" style="color:#fff"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">1130101-001</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">TWAREN-TN-ASR001-01</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">[to TWAREN-AC-AS002-01] in 0 Mbps, out 0Mbps</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 09:50:01<br/> <div style="font-size:14px;float:right">17hr 33min</div></td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
+                    <!-- /.card-body -->
+                    </div>
+                    <!-- /.card-body -->
                   </div>
-                </div>
-              </div>
-              <!-- /.Start col -->
+            </div>
+            <div class="col-lg-6 col-md-6 card-deck connectedSortable">
+              <!-- /.card 1 -->     
+              <div class="card card-info" style=" margin-bottom: 10px;">
+                <div class="card-header bg-white">  
+                      <h3 class="card-title">外部監控事件告警列表</h3>
+      
+                      <div class="card-tools">
+                        <button
+                          type="button"
+                          class="btn btn-tool"
+                          data-lte-toggle="card-collapse"
+                        >
+                          <i data-lte-icon="expand" class="bi bi-plus-lg"></i>
+                          <i data-lte-icon="collapse" class="bi bi-dash-lg"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-tool"
+                          data-lte-toggle="card-remove"
+                        >
+                          <i class="bi bi-x-lg"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                <table class="table table-bordered table-striped">
+                <thead>
+                        <tr>
+                          <th style="text-align: center"><i class="icon bi bi-exclamation-circle-fill" style="font-size:20px;color:#dc3545"></i><span class="btn-tool">1</span></th>
+                          <th style="text-align: center"><i class="icon bi bi-exclamation-triangle-fill" style="font-size:20px;color:#ffc107"><span class="btn-tool">3</span></th>
+                          <th style="text-align: center"><i class="icon bi bi-check" style="font-size:20px;color:#28a745"><span class="btn-tool">0</span></th>
+                        </tr>
+                        </thead>
+              </table>
+                    <!-- /.card-header -->
+                    <div class="card-body table-responsive p-0">
+                      <table class="table table-hover text-nowrap">
+                        <thead>
+                         
+                        </thead>
+                        <tbody>
+                          <tr>
+                  <td style="text-align: center; vertical-align: middle; padding-left: 0.75rem"><i class="icon bi bi-exclamation-triangle-fill" style="font-size:20px; color:#ffc107"></i></td>
+                            <!--td style="background-color:#ffc107; text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-triangle" style="color:#fff"></i><br/></td-->
+                  <!--td style="background-color: rgba(247, 207, 7, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem;"><i class="icon fas fa-exclamation-triangle" style="color:#ffc107"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">O1130104-001</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">Big Data Platform</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">大數據資料平台連線Mail伺服器失敗</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 22:05:01<br/> <div style="font-size:14px;float:right">10hr 53min</div></td>
+                          </tr>
+                <tr>
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-exclamation-circle-fill" style="font-size:20px;color:#dc3545"></i></td>
+                            <!--td style="background-color:#dc3545; text-align: center; vertical-align: middle;"><i class="icon fas fa-exclamation-circle" style="color:#fff"></i><br/></td-->
+                  <!--td style="background-color: rgba(241, 69, 69, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem;"><i class="icon fas fa-exclamation-circle" style="color:#dc3545"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">O1130104-002</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">Big Data Platform</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">大數據資料平台連線失敗</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 22:05:01<br/> <div style="font-size:14px;float:right">10hr 53min</div></td>
+                          </tr>
+                <tr>
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-exclamation-triangle-fill" style="font-size:20px;color:#ffc107"></i></td>
+                            <!--td style="background-color: rgba(247, 207, 7, 0.6); text-align: center; vertical-align: middle;"><i class="icon fas fa-exclamation-triangle" style="color:#fff"></i><br/></td-->
+                  <!--td style="background-color: rgba(247, 207, 7, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem;"><i class="icon fas fa-exclamation-triangle" style="color:#ffc107"></i><br/></td-->
+                            <td>事件編號 <span style="color:dodgerblue">O1130104-003</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">Mail Server</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">Ping Mail 伺服器失敗</span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 22:05:01<br/> <div style="font-size:14px;float:right">10hr 53min</div></td>
+                          </tr>
+                <tr>
+                            <!--td style="background-color:#ffc107; text-align: center; vertical-align: middle;"><i class="icon fas fa-exclamation-triangle" style="color:#fff"></i><br/></td-->
+                  <!--td style="background-color: rgba(247, 207, 7, 0.6); text-align: center; vertical-align: middle;padding-left:-0.5 rem"><i class="icon fas fa-exclamation-triangle" style="color:#ffc107"></i><br/></td-->
+                  <td style="text-align: center; vertical-align: middle;padding-left: 0.75rem"><i class="icon bi bi-check" style="font-size:20px;color:#28a745"></i></td>
+                            <td>事件編號 <span style="color:dodgerblue">O1130104-004</span><br/>
+                  類別 <span style="color:dodgerblue">Traffic </span>設備/單位 <span style="color:dodgerblue">Mail Server</span><br>
+                  <div style="font-size:14px">描述 <span style="color:dodgerblue">Ping Mail 伺服器失敗 </span></div></td>
+                            <td style="font-size:14px;float:right">2024/06/14 22:05:01<br/> <div style="font-size:14px;float:right">10hr 53min</div></td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                    </div>
+                    <!-- /.card-body -->
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+            </div>
             </div>
             <!-- /.row (main row) -->
           </div>
